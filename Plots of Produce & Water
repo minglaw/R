@@ -1,6 +1,8 @@
+
 #Some information about the data: Point of Sale (POS) data was pulled from 4 corner stores in Philadelphia (2 intervention and 2 control). The data was pulled via a point-and-click method within the 'merchandise analysis' reporting tool. The baseline period is from February 1st to April 12th, 2013, whereas the follow-up period after the intervention (April 12th, 2013) is April 13th to July 31st, 2013.
 
-#The following results compare the amount of produce and water sold between intervention (n=2) and control groups (n=2) in the baseline and follow up periods. 
+#The following results compare the amount of produce and water sold between intervention (n=2) and control groups (n=2) in the baseline and follow up periods using the data visualization/graphing package'ggplot2'. Simply copy and paste the code into R (it's better to use the script editor and just 'run all').
+
 
 #installing and loading ggplot2
 install.packages("ggplot2")
