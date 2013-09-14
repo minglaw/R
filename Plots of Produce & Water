@@ -1,4 +1,3 @@
-
 #Some information about the data: Point of Sale (POS) data was pulled from 4 corner stores in Philadelphia (2 intervention and 2 control). The data was pulled via a point-and-click method within the 'merchandise analysis' reporting tool. The baseline period is from February 1st to April 12th, 2013, whereas the follow-up period after the intervention (April 12th, 2013) is April 13th to July 31st, 2013.
 
 #The following results compare the amount of produce and water sold between intervention (n=2) and control groups (n=2) in the baseline and follow up periods using the data visualization/graphing package'ggplot2'. Simply copy and paste the code into R (it's better to use the script editor and just 'run all').
@@ -25,13 +24,13 @@ df.produce <- subset(df,type=="produce")
 
 #creating ggplot objects with the data
 p <- ggplot(df.produce,aes(fill=Group,y=items_sold,x=baseline))
-pp <- p + geom_bar(position="dodge",stat="identity") + labs(list(title = "Quantity of Produce Sold Per Day For \nControl and Intervention Corner Stores", x = "Time Periods", y = "Produce Sold Per Day")) + geom_hline(yintercept=10.19)
+pp <- p + geom_bar(position="dodge",stat="identity") + labs(list(title = "Quantity of Produce Sold Per Day For \nControl and Intervention Corner Stores", x = "Time Periods", y = "Produce Sold Per Day")) + geom_hline(yintercept=10.19,linetype=2)
 
 #subsetting the dataframe by item category, this time by water
 df.water <- subset(df,type=="water")
 
 g <- ggplot(df.water,aes(fill=Group,y=items_sold,x=baseline)) 
-gg <- g + geom_bar(position="dodge",stat="identity") + labs(list(title = "Quantity of Water Sold Per Day For \nControl and Intervention Corner Stores", x = "Time Periods", y = "Water Sold Per Day")) + geom_hline(yintercept=19.16)
+gg <- g + geom_bar(position="dodge",stat="identity") + labs(list(title = "Quantity of Water Sold Per Day For \nControl and Intervention Corner Stores", x = "Time Periods", y = "Water Sold Per Day")) + geom_hline(yintercept=19.16,linetype=2)
 
 #plots
 pp
