@@ -6,12 +6,14 @@
 install.packages("ggplot2")
 library(ggplot2)
 
-#creating a dataframe 
+#creating the vectors
 Group <- c("intervention","intervention","control","control","intervention","intervention","control","control")
 baseline <- c("baseline","follow up","baseline","follow up","baseline","follow up","baseline","follow up")
 items_sold <- c(10.19,15.15,1.06,1.03,19.16,33.75,8.32,9.78)
 type <- c("produce","produce","produce","produce","water","water","water","water")
-df < -data.frame(Group,baseline,items_sold,type)
+
+#creating a dataframe from the vectors
+df <- data.frame(Group,baseline,items_sold,type)
 
 #viewing the dataframe 
 df 
